@@ -1,0 +1,59 @@
+.superiority {
+  &-banner {
+    height: 500px;
+    background: url("../images/cpys-banner.jpg") no-repeat center;
+    background-size: cover;
+  }
+  &-list {
+    padding-left: 38px;
+    .item {
+      margin-bottom: 16px;
+      color: #333;
+      padding: 30px 30px 30px 100px;
+      border: 1px solid #eee;
+      position: relative;
+      .superiority-ui {
+        width: 110px;
+        height: 130px;
+        display: inline-block;
+        position: absolute;
+        left: -38px;
+        top: 10px;
+        background: url("../images/cpys-ui.png") no-repeat;
+        &.icon-1 {
+          background-position: -141px 0px;
+        }
+        &.icon-2 {
+          background-position: -272px 0px;
+        }
+        &.icon-3 {
+          background-position: 0px -162px;
+        }
+        &.icon-4 {
+          background-position: -131px -162px;
+        }
+        &.icon-5 {
+          background-position: -262px -162px;
+        }
+        &.icon-6 {
+          background-position: 0px 0px;
+        }
+        &.icon-7 {
+          background-position: -403px 0px;
+        }
+        &.icon-8 {
+          background-position: -403px -150px;
+        }
+      }
+      .tit {
+        font-size: 20px;
+      }
+      .text {
+        font-size: 16px;
+        height: 50px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+    }
+  }
+}

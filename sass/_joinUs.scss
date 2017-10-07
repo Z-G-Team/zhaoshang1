@@ -1,0 +1,110 @@
+.join-us {
+  background-color: #fafafa;
+  .bd {
+    position: relative;
+  }
+  .join-us-service {
+    position: absolute;
+    left: -25px;
+    bottom: 0;
+  }
+  .join-us-content {
+    margin: 0 0 0 180px;
+    width: 635px;
+    p {
+      font-size: 26px;
+      line-height: 1;
+      padding: 30px 0 20px;
+    }
+  }
+  .join-us-bottom {
+    height: 64px;
+    line-height: 64px;
+    color: $color-white;
+    .join-us-text {
+      font-size: 24px;
+    }
+    .apply-retention {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 25px;
+      margin: 12px 68px 0 0;
+      &:hover {
+        background-color: $color-white;
+      }
+    }
+  }
+}
+
+.join-us-form {
+  .form-item {
+    width: 285px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    margin-bottom: 10px;
+    &:last-child {
+      width: auto;
+    }
+
+    .form-item-label {
+      width: 85px;
+      line-height: 30px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .form-item-control {
+      display: inline-block;
+      height: 32px;
+      border: 1px solid $color-text-gray;
+      border-radius: 3px;
+      width: 185px;
+      padding: 0 15px;
+      &.border-none {
+        border: 0;
+      }
+      .form-item-input {
+      }
+    }
+  }
+  .form-item-select {
+    .form-group {
+      display: inline-block;
+      width: 170px;
+      position: relative;
+      &:after {
+        @include arrow(bottom,6px,#666);
+        position: absolute;
+        right: 15px;
+        top: 13px;
+      }
+      .sr-only {
+        display: none;
+      }
+      .form-item-control {
+        width: 100%;
+      }
+    }
+  }
+  .form-item-radio {
+    label {
+      padding-left: 20px;
+    }
+    .checked {
+      @include square(18px);
+      display: inline-block;
+      border: 2px solid $theme-color;
+      border-radius: 50%;
+      vertical-align: top;
+      margin-top: 7px;
+    }
+    input[type="radio"] {
+      display: none;
+      &:checked {
+        & + .checked {
+          background-color: $theme-color;
+        }
+      }
+    }
+  }
+}

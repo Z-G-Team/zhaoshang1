@@ -1,0 +1,367 @@
+.hd {
+  text-align: center;
+  .title {
+    padding: 50px 0 20px;
+    line-height: 46px;
+    font-size: 36px;
+  }
+  .sub-title {
+    font-size: $font-size-16;
+    line-height: 1;
+  }
+}
+.icon-index {
+  background: url("../images/index-ui.png");
+  display: inline-block;
+  &.icon-index-1 {
+    background-position: -205px -158px;
+  }
+  &.icon-index-2 {
+    background-position: -157px -158px;
+  }
+  &.icon-index-3 {
+    background-position: -253px -206px;
+  }
+  &.icon-index-4 {
+    background-position: -205px -254px;
+  }
+  &.icon-index-5 {
+    background-position: -253px -254px;
+  }
+  &.icon-index-6 {
+    background-position: -253px -158px;
+  }
+  &.icon-index-7 {
+    background-position: -301px -158px;
+  }
+  &.icon-index-8 {
+    background-position: 0px 0px;
+    width: 148px;
+    height: 148px;
+  }
+  &.icon-index-9 {
+    background-position: -158px 0px;
+    width: 199px;
+    height: 147px;
+  }
+  &.icon-index-10 {
+    background-position: 0px -158px;
+    width: 147px;
+    height: 147px;
+  }
+}
+//第二层 多元化产品和服务体系
+.floor-2 {
+  .icon-index {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 18px;
+    &.icon-index-5 {
+      width: 40px;
+      height: 36px;
+    }
+  }
+  .list {
+    .item {
+      width: 20%;
+      min-height: 160px;
+      float: left;
+      padding-left: 10px;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+    .item-inner {
+      background-color: #fafafa;
+      padding: 25px 15px;
+      &:hover {
+        background-color: $theme-color;
+        color: $color-white;
+        box-shadow: -2px 2px 5px 2px $shadowColor;
+        .icon-index-1 {
+          background-position: -205px -158px;
+        }
+        .icon-index-2 {
+          background-position: -205px -206px;
+        }
+        .icon-index-3 {
+          background-position: -301px -206px;
+        }
+        .icon-index-4 {
+          background-position: -157px -254px;
+        }
+        .icon-index-5 {
+          background-position: -303px -254px;
+        }
+      }
+    }
+  }
+}
+.floor-2-pic {
+  width: 100%;
+  height: 424px;
+  color: $color-white;
+  &.floor-2-up {
+    background: url("../images/index-xs.jpg") no-repeat center center;
+  }
+  &.floor-2-down {
+    background: url("../images/index-xx.jpg") no-repeat center center;
+    .content-text {
+      margin-left: 50%;
+      padding-left: 20px;
+    }
+  }
+  .content-text {
+    line-height: 1;
+    padding-top: 92px;
+    h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .line {
+      width: 60px;
+      height: 4px;
+      background-color: $color-white;
+      display: block;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: $font-size-18;
+      line-height: 30px;
+    }
+    .icon-index {
+      width: 38px;
+      height: 38px;
+      margin-top: 15px;
+    }
+  }
+}
+
+.floor-3 {
+  .sub-title {
+    p {
+      padding-bottom: 10px;
+    }
+  }
+  .content {
+    padding: 40px 0 50px;
+  }
+}
+
+.floor-4 {
+  background-color: $color-bg;
+  .content {
+    padding-bottom: 50px;
+  }
+  .item-list {
+    .item-3 {
+      padding: 45px 25px 50px;
+      .text {
+        height: 120px;
+      }
+    }
+  }
+  .btn-box {
+    padding-top: 36px;
+    text-align: center;
+  }
+  .btn-advisory {
+    width: 235px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    color: $color-white;
+    :hover {
+    }
+  }
+}
+.service-ui {
+  background: url("../images/service-ui.png") no-repeat center center;
+  display: inline-block;
+}
+.service-box {
+  position: fixed;
+  z-index: 9999;
+  right: 15px;
+  bottom: 100px;
+  width: 250px;
+  &-img {
+    text-align: center;
+  }
+  &-inner {
+    background-color: $theme-color;
+    border-radius: 10px;
+    padding: 10px;
+    color: $color-white;
+    position: relative;
+    p {
+      line-height: 40px;
+      padding-left: 5px;
+    }
+    .service-txt {
+      width: 100%;
+      height: 95px;
+      padding: 10px;
+      overflow: auto;
+      background: $color-white;
+      border: 0;
+      font-size: 13px;
+      color: $color-text;
+    }
+    .service-box-item {
+      height: 35px;
+      border: 1px solid $color-white;
+      padding: 5px 10px;
+      margin-top: 6px;
+      .icon-user {
+        background-position: -24px -38px;
+        width: 14px;
+        height: 14px;
+      }
+      .icon-phone {
+        background-position: -68px 0px;
+        width: 14px;
+        height: 12px;
+      }
+      .icon-edit {
+        background-position: 0px -38px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+    .service-box-input {
+      font-size: $font-size-14;
+      color: $color-white;
+      padding-left: 5px;
+      &::-webkit-input-placeholder {
+        color: $color-white;
+      }
+    }
+    .btn-submit {
+      display: block;
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      background-color: $orange;
+      color: $color-white;
+      border-radius: 45px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    .icon-close {
+      background-position: -38px 0px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 18px;
+      top: 18px;
+    }
+  }
+}
+.layui-layer-service {
+  border-radius: 15px !important;
+}
+.service-big-box {
+  width: 500px;
+  height: 380px;
+  background: $green;
+  border-radius: 15px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  &-t {
+    position: relative;
+    padding-bottom: 5px;
+    h2 {
+      font-size: 32px;
+      color: $color-white;
+    }
+    .icon-close-big {
+      background-position: 0px 0px;
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+  &-m {
+    position: relative;
+    background-color: $color-white;
+    padding: 20px 15px;
+    box-shadow: inset -2px 2px 5px #666;
+    .join-us-form {
+      width: 100%;
+      .form-item {
+        width: 210px;
+        &:last-child {
+          width: auto;
+        }
+        .form-item-label {
+          width: 80px;
+        }
+        .form-item-control {
+          width: 120px;
+          input {
+            width: 100%;
+            font-size: $font-size-14;
+          }
+        }
+      }
+      .form-item-select {
+        .form-group {
+          width: 110px;
+        }
+        .form-item-control {
+          width: 100%;
+          padding-right: 30px;
+        }
+      }
+      .form-item-radio {
+        padding: 0;
+        label {
+          padding-left: 0;
+        }
+        .checked {
+          @include square(13px);
+          border: 2px solid $orange1;
+          margin-top: 10px;
+        }
+        input[type="radio"] {
+          &:checked {
+            & + .checked {
+              background-color: $orange1;
+            }
+          }
+        }
+      }
+    }
+    .btn-apply {
+      height: 40px;
+      line-height: 40px;
+      color: $color-white;
+      text-align: center;
+      padding: 0 30px;
+      border-radius: 10px;
+      background-color: $orange1;
+      position: absolute;
+      left: 50%;
+      bottom: -25px;
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  &-b {
+    .service-pic {
+      display: inline-block;
+      background: url("../images/service.png") no-repeat left bottom;
+      background-size: contain;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+    }
+  }
+}

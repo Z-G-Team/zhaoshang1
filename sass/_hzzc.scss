@@ -1,0 +1,478 @@
+@import "./_var.scss";
+@import "./_mixins.scss";
+.cooper {
+  @at-root {
+    .item {
+      p.text {
+        font-size: 16px;
+      }
+    }
+  }
+  .top-tab {
+    padding: 12px 30px 5px;
+    font-size: 0;
+    .item {
+      padding-bottom: 10px;
+      border-bottom: 2px solid #fff;
+      transition: border-bottom 0.3s;
+      display: inline-block;
+      text-align: center;
+      width: 14.28%;
+      &.active {
+        border-bottom: 2px solid $color-blue;
+      }
+      .text {
+        display: block;
+        font-size: 16px;
+      }
+      .cooper-ui {
+        width: 46px;
+        height: 46px;
+        display: inline-block;
+        background: url(../images/cooper-ui.png) no-repeat;
+        margin-bottom: 8px;
+        &.i-1 {
+          background-position: -264px -246px;
+        }
+        &.i-2 {
+          background-position: -132px -246px;
+        }
+        &.i-3 {
+          background-position: 0px -246px;
+        }
+        &.i-4 {
+          background-position: -352px -66px;
+        }
+        &.i-5 {
+          background-position: -198px -246px;
+        }
+        &.i-6 {
+          background-position: -352px 0px;
+        }
+        &.i-7 {
+          background-position: -66px -246px;
+        }
+      }
+    }
+  }
+  &-banner {
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    background: url("../images/cooper-banner.jpg") no-repeat center;
+    background-size: cover;
+  }
+  &-tab {
+    &-tit {
+      @include box-shadow($color: rgba(0, 0, 0, 0.2));
+    }
+    .tab-box {
+      font-size: 0;
+      .item {
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        display: inline-block;
+        padding: 0 18px;
+        position: relative;
+        &.active {
+          background: $color-blue;
+          color: #fff;
+          &:after {
+            @include arrow(bottom,
+                        8px,
+                        $color-blue) left: 50%;
+            bottom: -8px;
+            position: absolute;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+    .tab-content {
+      padding: 30px 0;
+      .h1-tit {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+      .cooper-process {
+        height: 656px; // width: 876px;
+        background: url("../images/cooper-process.png") no-repeat center;
+      }
+    }
+  }
+  @at-root {
+    .item-list {
+      .item {
+        overflow: hidden;
+        margin: 0 0 20px 20px;
+        border-top: 1px solid transparent;
+        float: left;
+        background: #fff;
+        transition: all 0.3s;
+        position: relative;
+        top: 0;
+        &.blue {
+          border-color: $blue;
+          .tit {
+            color: $blue;
+          }
+        }
+        &.red {
+          border-color: $red;
+          .tit {
+            color: $red;
+          }
+        }
+        &.orange {
+          border-color: $orange;
+          .tit {
+            color: $orange;
+          }
+        }
+        &.green {
+          border-color: $green;
+          .tit {
+            color: $green;
+          }
+        }
+        &.bluePurple {
+          border-color: $bluePurple;
+          .tit {
+            color: $bluePurple;
+          }
+        }
+        &.purpleRed {
+          border-color: $purpleRed;
+          .tit {
+            color: $purpleRed;
+          }
+        }
+        &-3 {
+          &:hover {
+            box-shadow: -2px 2px 5px 2px $shadowColor;
+            top: -10px;
+          }
+          width: 380px;
+          height: 408px;
+          padding: 40px 35px 50px;
+          font-size: 16px;
+          color: #777;
+          .text {
+            overflow: hidden;
+            height: 100px;
+          }
+          &:nth-child(3n + 1) {
+            margin-left: 0;
+          }
+          .tit {
+            font-size: 28px;
+          }
+          .short-tit {
+            font-size: 20px;
+            line-height: 2;
+            text-align: center;
+            color: #333;
+          }
+        }
+        &-4 {
+          padding-top: 40px;
+          width: 289px;
+          margin: 0 0 50px 8px;
+          &:nth-child(4n + 1) {
+            margin-left: 0;
+          }
+          &:hover {
+            top: -10px;
+            .inner {
+              box-shadow: 2px 2px 5px 2px $shadowColor;
+            }
+          }
+          .inner {
+            height: 290px;
+            width: 100%;
+            padding: 80px 20px 20px;
+            border: 1px solid #eaebec;
+            .short-tit {
+              font-size: 24px;
+              color: #333;
+              padding-bottom: 10px;
+              position: relative;
+              border-bottom: 1px solid #999;
+              margin-bottom: 15px;
+              &:after {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                background: #999;
+                transform: rotate(40deg);
+                width: 10px;
+                position: absolute;
+                right: 0;
+                bottom: 2px;
+              }
+            }
+          }
+        }
+        &-4-4 {
+          width: 286px;
+          height: 348px;
+          margin-left: 12px;
+          border: 1px solid #eaebec;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:hover {
+            box-shadow: -2px 2px 5px 3px $shadowColor;
+          }
+          .short-tit {
+            text-align: center;
+            color: #333;
+            font-size: 20px;
+            line-height: 3;
+          }
+          .img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 144px;
+            &.enrol-1 {
+              background-image: url("../images/enrol-2.jpg");
+            }
+            &.enrol-3 {
+              background-image: url("../images/enrol-3.jpg");
+            }
+            &.enrol-4 {
+              background-image: url("../images/enrol-4.jpg");
+            }
+            &.gl-1 {
+              background-image: url("../images/gl-1.jpg");
+            }
+            &.gl-2 {
+              background-image: url("../images/gl-2.jpg");
+            }
+            &.gl-3 {
+              background-image: url("../images/gl-3.jpg");
+            }
+            &.gl-4 {
+              background-image: url("../images/gl-4.jpg");
+            }
+          }
+        }
+        &-5 {
+          width: 228px;
+          height: 302px;
+          margin-left: 9px;
+          border: 1px solid #eaebec;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:hover {
+            box-shadow: -2px 2px 5px 3px $shadowColor;
+          }
+          .short-tit {
+            text-align: center;
+            color: #333;
+            font-size: 20px;
+            line-height: 3;
+          }
+          .img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 120px;
+            &.teach-1 {
+              background-image: url("../images/teach-1.jpg");
+            }
+            &.teach-2 {
+              background-image: url("../images/teach-2.jpg");
+            }
+            &.teach-3 {
+              background-image: url("../images/teach-3.jpg");
+            }
+            &.teach-4 {
+              background-image: url("../images/teach-4.jpg");
+            }
+            &.teach-5 {
+              background-image: url("../images/teach-5.jpg");
+            }
+            &.pin-1 {
+              background-image: url("../images/pin-1.jpg");
+            }
+            &.pin-2 {
+              background-image: url("../images/pin-2.jpg");
+            }
+            &.pin-3 {
+              background-image: url("../images/pin-3.jpg");
+            }
+            &.pin-4 {
+              background-image: url("../images/pin-4.jpg");
+            }
+            &.pin-5 {
+              background-image: url("../images/pin-5.jpg");
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.market-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  text-align: center;
+  &.i-1 {
+    &:after {
+      background-color: $orange1;
+    }
+    .market-ui {
+      background-position: -88px 0px;
+    }
+  }
+  &.i-2 {
+    &:after {
+      background-color: $green;
+    }
+    .market-ui {
+      background-position: -176px 0px;
+    }
+  }
+  &.i-3 {
+    &:after {
+      background-color: $red;
+    }
+    .market-ui {
+      background-position: -88px -164px;
+    }
+  }
+  &.i-4 {
+    &:after {
+      background-color: $blue;
+    }
+    .market-ui {
+      background-position: -176px -164px;
+    }
+  }
+  &.i-5 {
+    &:after {
+      background-color: $bluePurple;
+    }
+    .market-ui {
+      background-position: 0px 0px;
+    }
+  }
+  &.i-6 {
+    &:after {
+      background-color: $purpleRed;
+    }
+    .market-ui {
+      background-position: 0px -164px;
+    }
+  }
+  &.i-7 {
+    &:after {
+      background-color: $orange1;
+    }
+    .market-ui {
+      background-position: 0px -82px;
+    }
+  }
+  &.i-8 {
+    &:after {
+      background-color: $green;
+    }
+    .market-ui {
+      background-position: -264px -164px;
+    }
+  }
+  &.i-9 {
+    &:after {
+      background-color: $red;
+    }
+    .market-ui {
+      background-position: -88px -82px;
+    }
+  }
+  &.i-10 {
+    &:after {
+      background-color: $blue;
+    }
+    .market-ui {
+      background-position: -264px -82px;
+    }
+  }
+  &.i-11 {
+    &:after {
+      background-color: $bluePurple;
+    }
+    .market-ui {
+      background-position: -264px 0px;
+    }
+  }
+  &.i-12 {
+    &:after {
+      background-color: $purpleRed;
+    }
+    .market-ui {
+      background-position: -176px -82px;
+    }
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 80px;
+    border-radius: 40px 40px 0 0;
+    background: $blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .market-ui {
+    background: url("../images/cooper-ui.png") no-repeat;
+    width: 68px;
+    height: 62px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    vertical-align: middle;
+  }
+}
+.open-icon {
+  text-align: center;
+  .open-ui {
+    background: url("../images/open-ui.png") no-repeat;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    &.i-1 {
+      background-position: 0px 0px;
+    }
+    &.i-2 {
+      background-position: -150px 0px;
+    }
+    &.i-3 {
+      background-position: 0px -150px;
+    }
+    &.i-4 {
+      background-position: -150px -150px;
+    }
+    &.i-5 {
+      background-position: -300px 0px;
+    }
+    &.i-6 {
+      background-position: -300px -150px;
+    }
+  }
+}
+.open {
+  background: #f1f5fb;
+}
