@@ -40,7 +40,7 @@
     height: 148px;
   }
   &.icon-index-9 {
-    background-position: -158px 0px;
+    background-position: -157px 0px;
     width: 199px;
     height: 147px;
   }
@@ -74,6 +74,7 @@
     .item-inner {
       background-color: #fafafa;
       padding: 25px 15px;
+      transition: all .3s;
       &:hover {
         background-color: $theme-color;
         color: $color-white;
