@@ -46,7 +46,6 @@ $(function() {
     autoSelect: false
   });
 
-  var showOnlie = false;
   setTimeout(function() {
     onlineApply();
   }, 1000);
@@ -61,9 +60,9 @@ $(function() {
     });
   }
 
-  $(".apply-retention").on("click", function() {
-    onlineApply();
-  });
+  // $(".apply-retention").on("click", function() {
+  //   onlineApply();
+  // });
 
   $("#close-message").on("click", function() {
     $("#leave-message-box").hide();
