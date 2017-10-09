@@ -52,7 +52,7 @@ $(function() {
       title: false,
       skin: "layui-layer-service",
       closeBtn: false,
-      area: ["500px", "380px"], //宽高
+      area: ["510px", "380px"], //宽高
       content: $(".service-big-box")
     });
   }, 1000);
