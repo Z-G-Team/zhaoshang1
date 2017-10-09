@@ -56,4 +56,8 @@ $(function() {
       content: $(".service-big-box")
     });
   }, 1000);
+
+  $("#close-message").on("click", function() {
+    $("#leave-message-box").hide();
+  });
 });
