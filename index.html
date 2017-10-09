@@ -264,7 +264,7 @@
                                     您的姓名：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="username" class="form-item-input" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -289,7 +289,7 @@
                                     手机号码：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="phone" class="form-item-input" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -297,7 +297,7 @@
                                     常用邮箱：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="email" class="form-item-input" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item">
@@ -305,7 +305,7 @@
                                     目前职业：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="occupation" class="form-item-input" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -313,7 +313,7 @@
                                     投资额度：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="选填">
+                                    <input type="text" name="quota" class="form-item-input" placeholder="选填">
                                 </div>
                             </div>
                             <div class="form-item">
@@ -323,15 +323,15 @@
                                 <div class="form-item-select inline-block" id="distpicker">
                                     <div class="form-group">
                                         <label class="sr-only" for="province01">省</label>
-                                        <select class="form-item-control" id="province01"></select>
+                                        <select class="form-item-control" name="province" id="province01"></select>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="city01">市</label>
-                                        <select class="form-item-control" id="city01"></select>
+                                        <select class="form-item-control" name="city" id="city01"></select>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="district01">区</label>
-                                        <select class="form-item-control" id="district01"></select>
+                                        <select class="form-item-control" name="district" id="district01"></select>
                                     </div>
                                 </div>
                             </div>
@@ -401,18 +401,18 @@
             <p>
                 请你留言
             </p>
-            <textarea class="service-txt" placeholder="请在此输入留言内容，我们会尽快与您联系！（必填）"></textarea>
+            <textarea class="service-txt" name="messageContent" placeholder="请在此输入留言内容，我们会尽快与您联系！（必填）"></textarea>
             <div class="service-box-item">
                 <i class="service-ui icon-user"></i>
-                <input type="text" class="service-box-input" placeholder="姓名（必填）">
+                <input type="text" name="messageUserName" class="service-box-input" placeholder="姓名（必填）">
             </div>
             <div class="service-box-item">
                 <i class="service-ui icon-phone"></i>
-                <input type="text" class="service-box-input" placeholder="电话（必填）">
+                <input type="text" name="messagePhone" class="service-box-input" placeholder="电话（必填）">
             </div>
             <div class="service-box-item">
                 <i class="service-ui icon-edit"></i>
-                <input type="text" class="service-box-input" placeholder="合作区域（必填）">
+                <input type="text" name="messageArea" class="service-box-input" placeholder="合作区域（必填）">
             </div>
             <a class="btn-submit" href="javascript:;">
                 提交
@@ -436,7 +436,7 @@
                             您的姓名：
                         </div>
                         <div class="form-item-control">
-                            <input type="text" class="form-item-input" placeholder="必填">
+                            <input type="text" name="username1" class="form-item-input" placeholder="必填">
                         </div>
                     </div>
                     <div class="form-item ml5">
@@ -445,12 +445,12 @@
                         </div>
                         <div class="form-item-control border-none form-item-radio">
                             <label for="sexsmall01">
-                                <input type="radio" value="0" name="sexsmall" id="sexsmall01">
+                                <input type="radio" value="0" name="sex1" id="sexsmall01">
                                 <i class="checked"></i>
                                 男
                             </label>
                             <label for="sexsmall02" class="pl15">
-                                <input type="radio" value="1" name="sexsmall" id="sexsmall02">
+                                <input type="radio" value="1" name="sex1" id="sexsmall02">
                                 <i class="checked"></i>
                                 女
                             </label>
@@ -461,7 +461,7 @@
                             手机号码：
                         </div>
                         <div class="form-item-control">
-                            <input type="text" class="form-item-input" placeholder="必填">
+                            <input type="text" name="phone1" class="form-item-input" placeholder="必填">
                         </div>
                     </div>
                     <div class="form-item ml5">
@@ -469,7 +469,7 @@
                             常用邮箱：
                         </div>
                         <div class="form-item-control">
-                            <input type="text" class="form-item-input" placeholder="必填">
+                            <input type="text" name="email1" class="form-item-input" placeholder="必填">
                         </div>
                     </div>
                     <div class="form-item">
@@ -477,7 +477,7 @@
                             目前职业：
                         </div>
                         <div class="form-item-control">
-                            <input type="text" class="form-item-input" placeholder="必填">
+                            <input type="text" name="occupation1" class="form-item-input" placeholder="必填">
                         </div>
                     </div>
                     <div class="form-item ml5">
@@ -485,7 +485,7 @@
                             投资额度：
                         </div>
                         <div class="form-item-control">
-                            <input type="text" class="form-item-input" placeholder="选填">
+                            <input type="text" name="quota1" class="form-item-input" placeholder="选填">
                         </div>
                     </div>
                     <div class="form-item">
@@ -495,15 +495,15 @@
                         <div class="form-item-select inline-block" id="distpicker1">
                             <div class="form-group">
                                 <label class="sr-only" for="province02">省</label>
-                                <select class="form-item-control ellipsis" id="province02"></select>
+                                <select class="form-item-control ellipsis" name="province1" id="province02"></select>
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="city02">市</label>
-                                <select class="form-item-control ellipsis" id="city02"></select>
+                                <select class="form-item-control ellipsis" name="city1" id="city02"></select>
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="district02">区</label>
-                                <select class="form-item-control ellipsis" id="district02"></select>
+                                <select class="form-item-control ellipsis" name="district1" id="district02"></select>
                             </div>
                         </div>
                     </div>
