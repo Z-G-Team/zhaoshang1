@@ -46,7 +46,11 @@ $(function() {
     autoSelect: false
   });
 
+  var showOnlie = false;
   setTimeout(function() {
+    onlineApply();
+  }, 1000);
+  function onlineApply() {
     layer.open({
       type: 1,
       title: false,
@@ -55,7 +59,11 @@ $(function() {
       area: ["510px", "380px"], //宽高
       content: $(".service-big-box")
     });
-  }, 1000);
+  }
+
+  $(".apply-retention").on("click", function() {
+    onlineApply();
+  });
 
   $("#close-message").on("click", function() {
     $("#leave-message-box").hide();
