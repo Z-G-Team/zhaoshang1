@@ -51,7 +51,7 @@ $(function() {
       type: 1,
       title: false,
       skin: "layui-layer-service",
-      closeBtn: false,
+      // closeBtn: false,
       area: ["510px", "380px"], //宽高
       content: $(".service-big-box")
     });
