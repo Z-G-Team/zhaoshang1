@@ -21,23 +21,24 @@
         <div class="wrapper clearfix">
             <!-- logo -->
             <h1 class="logo fl">
-                <img src="/dest/images/121logo.png" alt="">
+                <img src="../dest/images/121logo.png" alt="">
             </h1>
             <div class="tab">
                 <a class="tab-item" href="/">首页</a>
-                <a class="tab-item" href="/pages/productItem.html">产品项目</a>
+                <a class="tab-item" href="/pages/productProject.html">产品项目</a>
                 <a class="tab-item" href="/pages/cooperate.html">合作支持</a>
                 <a class="tab-item" href="/pages/productSuperiority.html">产品优势</a>
+                <a class="tab-item" href="/pages/case.html">加盟案例</a>
                 <a class="tab-item" href="/pages/about.html">关于我们</a>
                 <a href="javascript:;" class="btn btn-primary btn-mini">
-                        加盟咨询
-                    </a>
+                                加盟咨询
+                            </a>
             </div>
         </div>
     </div>
     <!-- 头部 end -->
     <!-- 现在加入我们 -->
-    <div class="join-us">
+    <div class="section join-us">
         <div class="join-us-top">
             <div class="wrapper">
                 <h2 class="hd">
@@ -49,7 +50,7 @@
                     </div>
                 </h2>
                 <div class="bd pb20 clearfix">
-                    <img class="join-us-service" src="/dest/images/service.jpg" alt="" width="202">
+                    <img class="join-us-service" src="../dest/images/service.jpg" alt="" width="202">
                     <div class="join-us-content fl">
                         <p>在线预约</p>
                         <form action="/" class="join-us-form" method="POST" id="butForm">
@@ -58,7 +59,7 @@
                                     您的姓名：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="username1" class="form-item-input butUserName" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -67,15 +68,15 @@
                                 </div>
                                 <div class="form-item-control border-none form-item-radio">
                                     <label for="sex01">
-                                    <input type="radio" value="0" name="sex" id="sex01">
-                                    <i class="checked"></i>
-                                    男
-                                </label>
+                                                <input type="radio" value="0" name="sex1" id="sex01" checked>
+                                                <i class="checked"></i>
+                                                男
+                                            </label>
                                     <label for="sex02">
-                                    <input type="radio" value="1" name="sex" id="sex02">
-                                    <i class="checked"></i>
-                                    女
-                                </label>
+                                                <input type="radio" value="1" name="sex1" id="sex02">
+                                                <i class="checked"></i>
+                                                女
+                                            </label>
                                 </div>
                             </div>
                             <div class="form-item">
@@ -83,7 +84,7 @@
                                     手机号码：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="phone1" class="form-item-input butPhone" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -91,7 +92,7 @@
                                     常用邮箱：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="email" class="form-item-input butEmail" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item">
@@ -99,7 +100,7 @@
                                     目前职业：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="occupation1" class="form-item-input butOccupation" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -107,7 +108,7 @@
                                     投资额度：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="选填">
+                                    <input type="text" name="quota1" class="form-item-input butQuota" placeholder="选填">
                                 </div>
                             </div>
                             <div class="form-item">
@@ -117,22 +118,22 @@
                                 <div class="form-item-select inline-block" id="distpicker">
                                     <div class="form-group">
                                         <label class="sr-only" for="province01">省</label>
-                                        <select class="form-item-control" id="province01"></select>
+                                        <select class="form-item-control butProvince" name="province1" id="province01"></select>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="city01">市</label>
-                                        <select class="form-item-control" id="city01"></select>
+                                        <select class="form-item-control butCity" name="city1" id="city01"></select>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="district01">区</label>
-                                        <select class="form-item-control" id="district01"></select>
+                                        <select class="form-item-control butDistrict" name="district1" id="district01"></select>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="join-us-flow tr">
-                        <img src="/dest/images/service2.jpg" alt="">
+                        <img src="../dest/images/service2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -142,8 +143,8 @@
                         我们将尽快与您取得联系
                     </div>
                     <a href="javascript:;" class="btn btn-plain apply-retention fr butSub">
-                    立即申请预约
-                </a>
+                                立即申请预约
+                            </a>
                 </div>
             </div>
         </div>
@@ -152,14 +153,14 @@
     <div class="footer">
         <div class="footer-nav">
             <a class="footer-nav-item" href="/">首页</acla>
-            <a class="footer-nav-item" href="/pages/about.html">关于我们</a>
+                <a class="footer-nav-item" href="/pages/about.html">关于我们</a>
             <a class="footer-nav-item" href="/">联系我们</a>
             <a class="footer-nav-item" href="/">加盟</a>
         </div>
         <div class="wrapper">
             <div class="footer-content clearfix">
                 <div class="footer-content-l">
-                    <img src="/dest/images/121logo-footer.png" alt="" width="237" class="vt mt15">
+                    <img src="../dest/images/121logo-footer.png" alt="" width="237" class="vt mt15">
                 </div>
                 <div class="footer-content-m">
                     <p>版权信息：福建非常同步教育科技有限公司所发布展示的网页设计版权归本公司所有，任何商业用途均须联系作者。如未经授权用作他处，本公司将保留追究侵权者法律责任的权利。
@@ -176,7 +177,7 @@
                         </p>
                     </div>
                     <div class="footer-qrcode fl ml15">
-                        <img src="/dest/images/qrcode.jpg" alt="" width="92">
+                        <img src="../dest/images/qrcode.jpg" alt="" width="92">
                     </div>
                 </div>
             </div>
