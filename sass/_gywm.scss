@@ -91,6 +91,7 @@
       .video-src {
         position: relative;
         z-index: 3;
+        background: #000;
       }
       .blue-box {
         width: 768px;
@@ -150,16 +151,16 @@
       float: right;
       li {
         background-color: $color-white;
-        height: 82px;
-        line-height: 82px;
-        margin-top: 10px;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 4px;
         cursor: pointer;
         &:first-child {
           margin-top: 0;
         }
         img {
-          width: 70px;
-          height: 70px;
+          width: 40px;
+          height: 40px;
           display: inline-block;
           margin-right: 40px;
           margin-top: 6px;

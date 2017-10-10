@@ -12,6 +12,11 @@
       padding: 30px 30px 30px 100px;
       border: 1px solid #eee;
       position: relative;
+      left:0;
+      transition: left 0.3s;
+      &:hover{
+        left: -30px;
+      }
       .superiority-ui {
         width: 110px;
         height: 130px;

@@ -50,6 +50,7 @@ $(function() {
     onlineApply();
   }, 1000);
   function onlineApply() {
+    debugger
     layer.open({
       type: 1,
       title: false,
@@ -66,5 +67,89 @@ $(function() {
 
   $("#close-message").on("click", function() {
     $("#leave-message-box").hide();
+    if($("#leave-message-box").is(':hidden')){
+      time = setTimeout(function(){
+        $("#leave-message-box").show();
+      },30*1000)
+    }else{
+      $("#leave-message-box").hide();
+    }
   });
+  
+});
+$(function () {
+  //banner
+  $('.onSub').click(function(){
+      // alert('ddd');
+      layer.load(1)
+      $.ajax({
+          url : '/Index/addBook',
+          data : $('#onForm').serialize(),
+          dataType : 'json',
+          type : 'post',
+          success : function(ret){
+              layer.closeAll('loading');
+              layer.msg(ret.info);
+              $('.layui-layer-close').click();
+          },
+          error:function(ret){
+            setTimeout(function(){
+              layer.closeAll();
+            },5000)
+          }
+      });
+  });
+
+  $('.butSub').click(function(){
+      layer.load(1);
+      $.ajax({
+          url : '/Index/addBook',
+          data : $('#butForm').serialize(),
+          dataType : 'json',
+          type : 'post',
+          success : function(ret){
+              layer.closeAll('loading');
+              layer.msg(ret.info);
+
+              $('#butForm').find('input').val('');
+              $('#butForm').find('#province01').val('');
+              $('#butForm').find('#city01').val('');
+              $('#butForm').find('#district01').val('');
+          },
+          error:function(ret){
+            setTimeout(function(){
+              layer.closeAll();
+            },5000)
+          }
+      });
+  });
+
+
+  $('.lySub').click(function(){
+      // window.location.reload();
+      layer.load(1);
+      $.ajax({
+          url : '/Index/addMessage',
+          data : $('#lyForm').serialize(),
+          dataType : 'json',
+          type : 'post',
+          success : function(ret){
+              layer.closeAll('loading');
+              layer.msg(ret.info);
+              if(ret.status==1){
+                  $('#lyForm').find('input').val('');
+                  $('#lyForm').find('.service-txt').val('');
+
+                  $('#leave-message-box').hide();
+              }
+          },
+          error:function(ret){
+            setTimeout(function(){
+              layer.closeAll();
+            },5000)
+          }
+      });
+  });
+
+
 });

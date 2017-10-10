@@ -258,7 +258,7 @@
                     <img class="join-us-service" src="./dest/images/service.jpg" alt="" width="202">
                     <div class="join-us-content fl">
                         <p>在线预约</p>
-                        <form action="/" class="join-us-form" method="POST">
+                        <form action="/" class="join-us-form" method="POST" id="butForm">
                             <div class="form-item">
                                 <div class="form-item-label">
                                     您的姓名：
@@ -347,7 +347,7 @@
                     <div class="fl join-us-text">
                         我们将尽快与您取得联系
                     </div>
-                    <a href="javascript:;" class="btn btn-plain apply-retention fr">
+                    <a href="javascript:;" class="btn btn-plain apply-retention fr butSub">
                     立即申请预约
                 </a>
                 </div>
@@ -401,6 +401,7 @@
             <p>
                 请你留言
             </p>
+            <form method="post" action="" id="lyForm">
             <textarea class="service-txt" name="messageContent" placeholder="请在此输入留言内容，我们会尽快与您联系！（必填）"></textarea>
             <div class="service-box-item">
                 <i class="service-ui icon-user"></i>
@@ -414,7 +415,8 @@
                 <i class="service-ui icon-edit"></i>
                 <input type="text" name="messageArea" class="service-box-input" placeholder="合作区域（必填）">
             </div>
-            <a class="btn-submit" href="javascript:;">
+            </form>
+            <a class="btn-submit lySub" href="javascript:;">
                 提交
             </a>
             <i class="service-ui icon-close" id="close-message"></i>
@@ -430,7 +432,7 @@
                 <!-- <i class="service-ui icon-close-big"></i> -->
             </div>
             <div class="service-big-box-m">
-                <form action="/" class="join-us-form" method="POST">
+                <form action="/" class="join-us-form" method="POST" id="onForm">
                     <div class="form-item">
                         <div class="form-item-label">
                             您的姓名：
@@ -508,7 +510,7 @@
                         </div>
                     </div>
                 </form>
-                <a href="javascript:;" class="btn-apply">
+                <a href="javascript:;" class="btn-apply onSub">
                     立即申请预约
                 </a>
             </div>
