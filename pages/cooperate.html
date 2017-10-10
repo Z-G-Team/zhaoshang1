@@ -497,7 +497,7 @@
         </div>
     </div>
     <!-- 现在加入我们 -->
-    <div class="join-us">
+    <div class="section join-us">
         <div class="join-us-top">
             <div class="wrapper">
                 <h2 class="hd">
@@ -518,7 +518,7 @@
                                     您的姓名：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="username1" class="form-item-input butUserName" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -527,15 +527,15 @@
                                 </div>
                                 <div class="form-item-control border-none form-item-radio">
                                     <label for="sex01">
-                                                <input type="radio" value="0" name="sex" id="sex01">
-                                                <i class="checked"></i>
-                                                男
-                                            </label>
+                                            <input type="radio" value="0" name="sex1" id="sex01" checked>
+                                            <i class="checked"></i>
+                                            男
+                                        </label>
                                     <label for="sex02">
-                                                <input type="radio" value="1" name="sex" id="sex02">
-                                                <i class="checked"></i>
-                                                女
-                                            </label>
+                                            <input type="radio" value="1" name="sex1" id="sex02">
+                                            <i class="checked"></i>
+                                            女
+                                        </label>
                                 </div>
                             </div>
                             <div class="form-item">
@@ -543,7 +543,7 @@
                                     手机号码：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="phone1" class="form-item-input butPhone" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -551,7 +551,7 @@
                                     常用邮箱：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="email" class="form-item-input butEmail" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item">
@@ -559,7 +559,7 @@
                                     目前职业：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="必填">
+                                    <input type="text" name="occupation1" class="form-item-input butOccupation" placeholder="必填">
                                 </div>
                             </div>
                             <div class="form-item ml40">
@@ -567,7 +567,7 @@
                                     投资额度：
                                 </div>
                                 <div class="form-item-control">
-                                    <input type="text" class="form-item-input" placeholder="选填">
+                                    <input type="text" name="quota1" class="form-item-input butQuota" placeholder="选填">
                                 </div>
                             </div>
                             <div class="form-item">
@@ -577,15 +577,15 @@
                                 <div class="form-item-select inline-block" id="distpicker">
                                     <div class="form-group">
                                         <label class="sr-only" for="province01">省</label>
-                                        <select class="form-item-control" id="province01"></select>
+                                        <select class="form-item-control" name="province1" id="province01" class="butProvince"></select>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="city01">市</label>
-                                        <select class="form-item-control" id="city01"></select>
+                                        <select class="form-item-control" name="city1" id="city01" class="butCity"></select>
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="district01">区</label>
-                                        <select class="form-item-control" id="district01"></select>
+                                        <select class="form-item-control" name="district1" id="district01" class="butDistrict"></select>
                                     </div>
                                 </div>
                             </div>
@@ -602,8 +602,8 @@
                         我们将尽快与您取得联系
                     </div>
                     <a href="javascript:;" class="btn btn-plain apply-retention fr butSub">
-                                立即申请预约
-                            </a>
+                            立即申请预约
+                        </a>
                 </div>
             </div>
         </div>
@@ -658,7 +658,7 @@
                 tabContent: ".tab-contents",
                 tabPane: ".tab-content",
                 tabEvent: "click",
-                tabNavLink:'.tab-box'
+                tabNavLink: '.tab-box'
             });
         })
     </script>
