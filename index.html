@@ -402,19 +402,19 @@
                 请你留言
             </p>
             <form method="post" action="" id="lyForm">
-            <textarea class="service-txt" name="messageContent" placeholder="请在此输入留言内容，我们会尽快与您联系！（必填）"></textarea>
-            <div class="service-box-item">
-                <i class="service-ui icon-user"></i>
-                <input type="text" name="messageUserName" class="service-box-input" placeholder="姓名（必填）">
-            </div>
-            <div class="service-box-item">
-                <i class="service-ui icon-phone"></i>
-                <input type="text" name="messagePhone" class="service-box-input" placeholder="电话（必填）">
-            </div>
-            <div class="service-box-item">
-                <i class="service-ui icon-edit"></i>
-                <input type="text" name="messageArea" class="service-box-input" placeholder="合作区域（必填）">
-            </div>
+                <textarea class="service-txt" name="messageContent" placeholder="请在此输入留言内容，我们会尽快与您联系！（必填）"></textarea>
+                <div class="service-box-item">
+                    <i class="service-ui icon-user"></i>
+                    <input type="text" name="messageUserName" class="service-box-input" placeholder="姓名（必填）">
+                </div>
+                <div class="service-box-item">
+                    <i class="service-ui icon-phone"></i>
+                    <input type="text" name="messagePhone" class="service-box-input" placeholder="电话（必填）">
+                </div>
+                <div class="service-box-item">
+                    <i class="service-ui icon-edit"></i>
+                    <input type="text" name="messageArea" class="service-box-input" placeholder="合作区域（必填）">
+                </div>
             </form>
             <a class="btn-submit lySub" href="javascript:;">
                 提交
@@ -537,6 +537,21 @@
                 touch: true, //是否支持触屏滑动
                 directionNav: false
             });
+            setTimeout(function () {
+                onlineApply();
+            }, 1000);
+
+            function onlineApply() {
+                debugger
+                layer.open({
+                    type: 1,
+                    title: false,
+                    skin: "layui-layer-service",
+                    // closeBtn: false,
+                    area: ["510px", "380px"], //宽高
+                    content: $(".service-big-box")
+                });
+            }
 
 
         });

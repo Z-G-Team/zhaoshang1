@@ -7,7 +7,8 @@ $(function() {
         tabNavChild: "li",
         tabContent: ".tabs-content",
         tabPane: ".tabs-pane",
-        tabEvent: "click"
+        tabEvent: "click",
+        tabNavLink:'.tab-box'
       },
       opts = $.extend({}, defaults, options);
     return this.each(function() {
@@ -16,13 +17,26 @@ $(function() {
         var $this = $(this);
         var $index = $this.index();
         console.log($index);
-        $this
+        // $this
+        //   .addClass("active")
+        //   .siblings()
+        //   .removeClass("active");
+
+        $(opts.tabNav)
+          .find(opts.tabNavChild)
+          .eq($index)
           .addClass("active")
           .siblings()
           .removeClass("active");
-        $this
-          .parent()
-          .siblings(opts.tabContent)
+          if(opts.tabNavLink){
+            $(opts.tabNavLink)
+            .find(opts.tabNavChild)
+            .eq($index)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+          }
+        $(opts.tabContent)
           .children(opts.tabPane)
           .eq($index)
           .show()
@@ -46,20 +60,20 @@ $(function() {
     autoSelect: false
   });
 
-  setTimeout(function() {
-    onlineApply();
-  }, 1000);
-  function onlineApply() {
-    debugger
-    layer.open({
-      type: 1,
-      title: false,
-      skin: "layui-layer-service",
-      // closeBtn: false,
-      area: ["510px", "380px"], //宽高
-      content: $(".service-big-box")
-    });
-  }
+  // setTimeout(function() {
+  //   onlineApply();
+  // }, 1000);
+  // function onlineApply() {
+  //   debugger
+  //   layer.open({
+  //     type: 1,
+  //     title: false,
+  //     skin: "layui-layer-service",
+  //     // closeBtn: false,
+  //     area: ["510px", "380px"], //宽高
+  //     content: $(".service-big-box")
+  //   });
+  // }
 
   // $(".apply-retention").on("click", function() {
   //   onlineApply();
@@ -67,89 +81,97 @@ $(function() {
 
   $("#close-message").on("click", function() {
     $("#leave-message-box").hide();
-    if($("#leave-message-box").is(':hidden')){
-      time = setTimeout(function(){
+    if ($("#leave-message-box").is(":hidden")) {
+      time = setTimeout(function() {
         $("#leave-message-box").show();
-      },30*1000)
-    }else{
+      }, 30 * 1000);
+    } else {
       $("#leave-message-box").hide();
     }
   });
-  
 });
-$(function () {
+$(function() {
   //banner
-  $('.onSub').click(function(){
-      // alert('ddd');
-      layer.load(1)
-      $.ajax({
-          url : '/Index/addBook',
-          data : $('#onForm').serialize(),
-          dataType : 'json',
-          type : 'post',
-          success : function(ret){
-              layer.closeAll('loading');
-              layer.msg(ret.info);
-              $('.layui-layer-close').click();
-          },
-          error:function(ret){
-            setTimeout(function(){
-              layer.closeAll();
-            },5000)
-          }
-      });
+  $(".onSub").click(function() {
+    // alert('ddd');
+    layer.load(1);
+    $.ajax({
+      url: "/Index/addBook",
+      data: $("#onForm").serialize(),
+      dataType: "json",
+      type: "post",
+      success: function(ret) {
+        layer.closeAll("loading");
+        layer.msg(ret.info);
+        $(".layui-layer-close").click();
+      },
+      error: function(ret) {
+        setTimeout(function() {
+          layer.closeAll();
+        }, 5000);
+      }
+    });
   });
 
-  $('.butSub').click(function(){
-      layer.load(1);
-      $.ajax({
-          url : '/Index/addBook',
-          data : $('#butForm').serialize(),
-          dataType : 'json',
-          type : 'post',
-          success : function(ret){
-              layer.closeAll('loading');
-              layer.msg(ret.info);
+  $(".butSub").click(function() {
+    layer.load(1);
+    $.ajax({
+      url: "/Index/addBook",
+      data: $("#butForm").serialize(),
+      dataType: "json",
+      type: "post",
+      success: function(ret) {
+        layer.closeAll("loading");
+        layer.msg(ret.info);
 
-              $('#butForm').find('input').val('');
-              $('#butForm').find('#province01').val('');
-              $('#butForm').find('#city01').val('');
-              $('#butForm').find('#district01').val('');
-          },
-          error:function(ret){
-            setTimeout(function(){
-              layer.closeAll();
-            },5000)
-          }
-      });
+        $("#butForm")
+          .find("input")
+          .val("");
+        $("#butForm")
+          .find("#province01")
+          .val("");
+        $("#butForm")
+          .find("#city01")
+          .val("");
+        $("#butForm")
+          .find("#district01")
+          .val("");
+      },
+      error: function(ret) {
+        setTimeout(function() {
+          layer.closeAll();
+        }, 5000);
+      }
+    });
   });
 
+  $(".lySub").click(function() {
+    // window.location.reload();
+    layer.load(1);
+    $.ajax({
+      url: "/Index/addMessage",
+      data: $("#lyForm").serialize(),
+      dataType: "json",
+      type: "post",
+      success: function(ret) {
+        layer.closeAll("loading");
+        layer.msg(ret.info);
+        if (ret.status == 1) {
+          $("#lyForm")
+            .find("input")
+            .val("");
+          $("#lyForm")
+            .find(".service-txt")
+            .val("");
 
-  $('.lySub').click(function(){
-      // window.location.reload();
-      layer.load(1);
-      $.ajax({
-          url : '/Index/addMessage',
-          data : $('#lyForm').serialize(),
-          dataType : 'json',
-          type : 'post',
-          success : function(ret){
-              layer.closeAll('loading');
-              layer.msg(ret.info);
-              if(ret.status==1){
-                  $('#lyForm').find('input').val('');
-                  $('#lyForm').find('.service-txt').val('');
-
-                  $('#leave-message-box').hide();
-              }
-          },
-          error:function(ret){
-            setTimeout(function(){
-              layer.closeAll();
-            },5000)
-          }
-      });
+          $("#leave-message-box").hide();
+        }
+      },
+      error: function(ret) {
+        setTimeout(function() {
+          layer.closeAll();
+        }, 5000);
+      }
+    });
   });
-
-
 });
