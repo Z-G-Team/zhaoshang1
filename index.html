@@ -13,6 +13,18 @@
     <meta name="keywords" content="121同步">
     <meta name="description" content="121同步">
     <link rel="stylesheet" type="text/css" href="./dest/css/tongbu.min.css" />
+    <script>
+    function onlineApply() {
+        layer.open({
+            type: 1,
+            title: false,
+            skin: "layui-layer-service",
+            // closeBtn: false,
+            area: ["510px", "380px"], //宽高
+            content: $(".service-big-box")
+        });
+    }
+    </script>
 </head>
 
 <body>
@@ -233,7 +245,7 @@
                     </li>
                 </ul>
                 <div class="btn-box">
-                    <a href="javascript:;" class="btn btn-primary btn-advisory">
+                    <a href="javascript:;" class="btn btn-primary btn-advisory" onClick="onlineApply()">
                             点击咨询
                         </a>
                 </div>
@@ -542,16 +554,7 @@
                 onlineApply();
             }, 1000);
 
-            function onlineApply() {
-                layer.open({
-                    type: 1,
-                    title: false,
-                    skin: "layui-layer-service",
-                    // closeBtn: false,
-                    area: ["510px", "380px"], //宽高
-                    content: $(".service-big-box")
-                });
-            }
+            
         });
     </script>
 </body>

@@ -104,7 +104,8 @@ $(function () {
 
       },
       email: {
-        value: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test($('.yyEmail').val().trim())
+        value: /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test($('.yyEmail').val().trim()),
+        message:'请输入正确的邮箱格式'
       },
       occupation: {
         value: $('.yyOccupation').val().trim(),
